@@ -1,5 +1,7 @@
 package com.app.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,14 @@ public class TransationService {
 	
 	public Transation insert(Transation obj) {
 		return repository.insert(obj);
+	}
+	
+	public List<Transation> findAll(){
+		return repository.findAll();
+	}
+	
+	public List<Transation> findByClientId(String clientId){
+		return repository.findByClientId(clientId);
 	}
 	
 }
